@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang = "de">
+<head>
+    <meta charset = "UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel = "icon" type = "image/png" href = "Bilder/Logo_Isaralm_durchsichtig.png"/>
+	<script src="scripts/main.js"></script>
+    <script src="https://kit.fontawesome.com/bfb2d585dc.js" crossorigin="anonymous"></script>
+	<link rel = "stylesheet" href = "armin.css">
+
+    <title>Armin Guerino</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"><img src ="Bilder/logorosa.png"></label>
+        <ul>
+          <li><a class="active" href="index.html">Aktuell</a></li>
+          <li><a href="arbeiten.html">Arbeiten</a></li>
+          <li><a href="cv.html  ">CV</a></li>
+          <li><a href="bibliographie.html">Bibliographie</a></li>
+          <li><a href="index.html">Texte</a></li>
+          <li><a href="index.html">Archiv</a></li>
+          <li><a href="index.html">Links</a></li>
+        </ul>
+      </nav>
+   <img src="Bilder/armingrasgross.jpg" style=" background-size: cover; width: 100%;">
+   <p>Blasdlh</p>
+<footer class ="black"></footer>
+    
+                      <p style="text-align: center;"> &copy; Armin Guerino 2021 <br></p>
+                      
+ </footer>
+</body>
+<script>
+    // When the user scrolls down 200px from the top of the document, slide down the navbar
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "0vh";
+      }
+    }
+  
+    
+    
+      const body = document.querySelector("body");
+      const navbar = document.querySelector("#navbar");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = ()=>{
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+      }
+      cancelBtn.onclick = ()=>{
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+      }
+      
+    </script>
+    
+</html>
