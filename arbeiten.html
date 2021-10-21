@@ -15,7 +15,21 @@
     <title>Armin Guerino</title>
 </head>
 <body>
-    <nav>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html"><img src="Bilder/logotürkis.png"></a>
+          <a href="index.html" class="active">Start</a>
+          <a href="arbeiten.html">Arbeiten</a>
+          <a href="cv.html">CV</a>
+          <a href="bibliographie.html">Bibliographie</a>
+          <a href="links.html">Links</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>  
+    </div>
+
+
+    <!-- <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
           <i class="fas fa-bars"></i>
@@ -28,9 +42,58 @@
           <li><a href="bibliographie.html">Bibliographie</a></li>
           <li><a href="index.html">Texte</a></li>
           <li><a href="index.html">Archiv</a></li>
-          <li><a href="index.html">Links</a></li>
+          <li><a href="links.html">Links</a></li>
         </ul>
       </nav>
+<section> -->
+<h1>Arbeiten</h1>
+
+
+  <div class="wrapper">
+    <!-- filter Items -->
+    <nav>
+      <div class="items">
+        <span class="item active" data-name="all">alle Arbeiten</span>
+        <span class="item" data-name="bilder">Bilder</span>
+        <span class="item" data-name="grafik">Grafik</span>
+        <span class="item" data-name="projekte">Projekte</span>
+        <span class="item" data-name="foto">Fotografie</span>
+      </div>
+    </nav>
+    <!-- filter Images -->
+    <div class="gallery">
+      <div class="image" data-name="bilder"><span><img src="bilder/bild_20111207-007.jpg" alt=""></span></div>
+      <div class="image" data-name="bilder"><span><img src="Bilder/bild_20151118-005.jpg" alt=""></span></div>
+      <div class="image" data-name="bilder"><span><img src="Bilder/bild_20130603-001.jpg" alt=""></span></div>
+      <div class="image" data-name="bilder"><span><img src="Bilder/bild_20150222-001.jpg" alt=""></span></div>
+      <div class="image" data-name="bilder"><span><img src="Bilder/bild_20150808-003.jpg" alt=""></span></div>
+      <div class="image" data-name="grafik"><span><img src="Bilder/druck_20090700-002litho.jpg" alt=""></span></div>
+      <div class="image" data-name="grafik"><span><img src="Bilder/zeichnung_Gelenkmensch.jpg" alt=""></span></div>
+      <div class="image" data-name="projekte"><span><img src="Bilder/projektadlerfang8.jpg" alt=""></span></div>
+      <div class="image" data-name="projekte"><span><img src="Bilder/projekte_20spiegel1_©christian brandstaetter2020.jpeg" alt=""></span></div>
+      <div class="image" data-name="projekte"><span><img src="Bilder/projekt_quirl.jpg" alt=""></span></div>
+      <div class="image" data-name="projekte"><span><img src="Bilder/projekte_himmelsstiege3.jpeg" alt=""></span></div>
+      <div class="image" data-name="projekte"><span><img src="Bilder/Projekte_Regenbogen.jpg" alt=""></span></div>
+      <div class="image" data-name="foto"><span><img src="Bilder/foto_selkach.jpg" alt=""></span></div>
+      
+    </div>
+  </div>
+
+  <!-- fullscreen img preview box -->
+  <div class="preview-box">
+    <div class="details">
+       
+      <span class="icon fas fa-times"></span>
+    </div>
+    <div class="image-box"><img src="" alt=""></div>
+  </div>
+  <div class="shadow"></div>
+
+  <script src="script.js"></script>
+<!-- </section> -->
+</body>
+</html>
+
 
 </body>
 
