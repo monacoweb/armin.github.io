@@ -9,18 +9,30 @@
     text-decoration: none;
     list-style: none;
       }
-     
+body, html{
+  height: 100%;
+}
 
 body{ 
      
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+   
+    
+}
+
+h1{
+    padding: 30px;
     
 }
 a{
     color: black;
     text-decoration: none;
+}
+a:hover{
+    font-weight: bold;
+    
 }
 
 footer{
@@ -126,24 +138,15 @@ footer{
           } */
 
 .bio{
-    padding-left:40px;
+    padding-left:20px;
     width:100%;
     border: none;
-    overflow: auto;
-    border-spacing: 18px;
-    border-collapse: separate;
-        }          
-
-.start{
-    background-image: url("Bilder/armingrasgross.jpg");
-    background-position: center;
-    height: 500px;
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: block;
+    border-spacing: 15px;
 }
 
 
-  
+   
   .topnav {
     overflow: hidden;
     padding: 10px;
@@ -156,20 +159,17 @@ footer{
     display: inline-block;
     color: #f2f2f2;
     text-align: center;
-    
     padding-left: 50px;
     text-decoration: none;
     font-size: 17px;
   }
   
   .topnav a:hover {
-    
     color: hotpink;
   }
   
   .topnav a.active {
     text-emphasis: bold;
-    
   }
   
   .topnav .icon {
@@ -181,6 +181,8 @@ footer{
     .topnav a.icon {
       float: right;
       display: block;
+      padding-right: 10px;
+      padding-top:20px;
     }
   }
   
@@ -188,8 +190,8 @@ footer{
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 10px;
+      top: -5px;
     }
     .topnav.responsive a {
       float: none;
@@ -197,18 +199,82 @@ footer{
       text-align: left;
       line-height: 50px;
     }
+  } 
+
+
+
+  /* .main {
+    max-width: 1000px;
+    margin: auto;
   }
+  
 
 
+/* Arbeiten */
+  /* .row {
+    margin: 10px -16px;
+  } */
+  
+  /* Add padding BETWEEN each column */
+  /* .row,
+  .row > .column {
+    padding: 8px;
+  } */
+  
+  /* Create three equal columns that floats next to each other */
+  /* .column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default
+  } */
+  
+  /* Clear floats after rows */ 
+  /* .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  } */
+  
+  /* Content */
+  /* .content { 
+    background-color: white;
+    padding: 10px;
+  }
+  
+  /* The "show" class is added to the filtered elements 
+  .show {
+    display: block;
+  }/* 
+  
+  /* Style the buttons */
+  /* .btn { 
+    border: #3c3352;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #3c3352;
+    color: white;
+  }
+  
+  .btn.active {
+    background-color: #3c3352;
+    color: white;
+  } */
 
 
+/* 
+Galerie */
 ::selection{
   color: #fff;
-  background: #007bff;
+  background: #3c3352;;
 }
 
 .wrapper{
-  margin: 100px auto;
+  margin: 30px auto;
   max-width: 1100px;
 }
 .wrapper nav{
@@ -280,7 +346,7 @@ footer{
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
   background: #fff;
-  max-width: 700px;
+  max-width: 650px;
   width: 100%;
   z-index: 5;
   opacity: 0;
@@ -311,7 +377,7 @@ footer{
   margin-left: 5px;
 }
 .details .icon{
-  color: #007bff;
+  color: #3c3352;;
   font-style: 22px;
   cursor: pointer;
 }
@@ -369,4 +435,186 @@ footer{
   .gallery .image{
     width: 100%;
   }
+  .gallery .image:hover img{
+    transform: none;
+  }
+} 
+
+/* Start */
+.start{
+  text-align: center;
+  justify-content: space-between;
+  color: white;
+  border-spacing: 40px;
+ 
+  
 }
+.start td{
+  border: solid #3c3352;
+  padding: 10px;
+  background-color: #3c3352;
+  border-radius: 10px;
+}
+
+ .start a{
+  color: white;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("Bilder/armingrasgross.jpg");
+  height: 100%;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+
+
+
+
+
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+  background: #3c3352;
+}
+.navbar.sticky{
+  background: #3c3352;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a img{
+  align-items: center;
+  
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+  padding:15px;
+}
+.menu-list li a{
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color: hotpink;
+  font-weight: bold;
+}
+.banner{
+  background: #3c3352;
+  height: 15vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.about{
+  padding: 30px 0;
+}
+/* .about .title{
+  font-size: 38px;
+  font-weight: 700;
+} */
+.about p{
+  padding-top: 20px;
+  text-align: justify;
+}
+
+.navicon{
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+  
+}
+@media (max-width: 868px) {
+  body.disabled{
+    overflow: hidden;
+  }
+  .navicon{
+    display: block;
+  }
+  .navicon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: left;
+    background: #3c3352;
+    transition: all 0.3s ease;
+  }
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 17px;
+    margin-left: -100%;
+    
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 10px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar .logo a{
+    font-size: 17px;
+  }
+}
+
