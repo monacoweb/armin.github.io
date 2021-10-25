@@ -41,7 +41,7 @@ function preview(element){
   let selectedPrevImg = element.querySelector("img").src; //getting user clicked image source link and stored in a variable
   let selectedImgCategory = element.getAttribute("data-name"); //getting user clicked image data-name value
   previewImg.src = selectedPrevImg; //passing the user clicked image source in preview image source
-  categoryName.textContent = selectedImgCategory; //passing user clicked data-name value in category name
+  // categoryName.textContent = selectedImgCategory; //passing user clicked data-name value in category name
   previewBox.classList.add("show"); //show the preview image box
   shadow.classList.add("show"); //show the light grey background
   closeIcon.onclick = ()=>{ //if user click on close icon of preview box
@@ -50,6 +50,25 @@ function preview(element){
     document.querySelector("body").style.overflow = "auto"; //show the scroll bar on body
   }
 }
+
+
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
 
 
 
